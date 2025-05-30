@@ -39,7 +39,7 @@ createApp({
       const dataValues50 = range(50, 200, 50);
       const labelValues50 = generateMonthLabels("2025-03-01", dataValues50.length);
     
-      const dataValues120 = range(270, 20000, 120);
+      const dataValues120 = range(270, 20600, 120);
       const labelValues120 = generateMonthLabels("2025-06-01", dataValues120.length);
 
       const dataValues = [...dataValues50, ...dataValues120];
@@ -64,6 +64,7 @@ createApp({
           scales: {
             y: {
                 beginAtZero: true,
+                max: 20600,
                 ticks: {
                     callback: function(value) {
                         return value.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' });
